@@ -1,0 +1,366 @@
+{
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+ border-radius: 3px;
+ background-color: #F5F5F5;
+}
+::-webkit-scrollbar
+{
+ width: 10px;
+ background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb
+{
+ border-radius: 10px;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #848484;
+}
+
+.formulario{
+    margin-top:15px;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+#p{
+    margin-left: 25px;
+}
+h4 {
+    margin-bottom: 25px;
+}
+#agregar_usuario{
+    float: right;
+}
+
+@font-face {
+    font-family: 'DroidSansRegular';
+    src: url('../fonts/DroidSans-webfont.eot?') format('eot'),
+    url('../fonts/DroidSans-webfont.woff') format('woff'),
+    url('../fonts/DroidSans-webfont.ttf') format('truetype'),
+    url('../fonts/DroidSans-webfont.svg#webfont6rGBoMAO') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body.admin #main {
+    padding-left: 200px;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding-top: 64px;
+    font: 12px "DroidSansRegular";
+    overflow-x: hidden;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    padding: 15px 0;
+    font-weight: bold;
+    background: #191919;
+    clear: both;
+    border: solid rgba(0, 0, 0, 0.25);
+    border-width: 1px 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+select option {
+    padding: 0px;
+}
+
+.alta-container{
+	padding: 25px;
+}
+
+footer {
+    -webkit-box-shadow: 0 0 5px 0 #000;
+    -moz-box-shadow: 0 0 5px 0 #000;
+    box-shadow: 0 0 5px 0 #000;
+}
+
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+
+/*
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+*/
+.titlebar {
+    background: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.titlebar h2 {
+    font-size: 22px;
+    padding: 20px;
+    margin: 0;
+    color: #FFF;
+    background-color: #a30a16;
+}
+
+/*
+.navbar-brand {
+    padding: 5px 15px;
+}
+
+.navbar-brand > div {
+    margin: 5px 0;
+    float: left;
+}
+
+.navbar-brand h1 {
+    font-size: 22px;
+    margin: 0;
+}
+.navbar-brand small {
+    font-size: 16px;
+    display: block;
+}
+.navbar-brand > img {
+    width: 48px;
+    margin-right: 5px;
+    float: left;
+}
+*/
+.publicacion {
+    max-width: none;
+    max-height: none;
+    width: 100%;
+
+}
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+.login{
+    margin-top: 25px;
+}
+
+.titlebar h2 a:hover {
+    text-decoration: none;
+}
+.titlebar h2 small {
+    margin: -7px 0;
+}
+/*
+.sidenav {
+    background: url(../img/menu-bg.png) left top repeat;
+    width: 200px;
+    position: fixed;
+    z-index: 1000;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    background-color: #666666;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    display: none;
+    right: 25px;
+    font-size: 64px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#nav, #nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+#nav {
+    position: relative;
+    height: auto;
+    margin: 0;
+    float: left;
+    width: 100%;
+    margin-top: 64px;
+}
+#nav li {
+    position: relative;
+    box-sizing: border-box;
+    z-index: 100;
+    width: 200px;
+    float: left;
+    border-bottom: 1px solid #888;
+}
+
+#nav li a:hover, #nav li button:hover, #nav li.selected a {
+    background-color: #999 !important;
+}
+#nav li button, #nav li a {
+    cursor: pointer;
+    background-color: #666;
+    color: white;
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    outline: 0;
+    padding: 5px 5px 5px 20px;
+    text-decoration: none;
+}
+#nav li.divider {
+    font-weight: bold;
+    color: #FFF;
+    font-size: 14px;
+    padding: 15px 5px 5px 10px;
+}
+#nav li {
+    position: relative;
+    box-sizing: border-box;
+    z-index: 100;
+    width: 200px;
+    float: left;
+    border-bottom: 1px solid #888;
+}
+*/
+.alta{
+    margin-top: 25px;
+    padding: 0px -15px;
+}
+
+.publicacion-header{
+    padding: 5px 0px;
+    background: #CACBB7;
+    width: 100%;
+    display: block;
+}
+
+.publicacion-header span {
+    font-size: 15px;
+}
+
+.publicacion-header a {
+    color: black;
+}
+
+.publicacion-header div {
+    margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+/*
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+  */
+  .listados {
+    overflow-x: auto;
+}
+.listados {
+    padding: 10px;
+}
+.listados th {
+    background-color: #4CAF50;
+    color: white;
+}
+.listados tbody > tr:nth-child(2n+1) > td {
+    background-color: #FFFFFF;
+}
+.listados tbody > tr > td {
+    background-color: #ffc198;
+}
+.listados th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+    
+}

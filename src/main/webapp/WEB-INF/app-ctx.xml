@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd    
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd"
+
+       default-autowire="byName">
+       
+		<context:component-scan base-package="clasesDAOHiberJPA, servlets, TestPersistencia"/>
+<!-- 		<context:component-scan base-package="servlets"/> -->
+		   
+		<mvc:annotation-driven/>
+<!-- 		  <context:property-placeholder location="classpath:database.properties"/> -->
+		
+		<!-- DataSource -->
+		<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"/>
+		
+
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/cartelera"/>
+		<property name="user" value="root"/>
+		<property name="password" value=""/>
+		<property name="acquireIncrement" value="2"/>
+		<property name="minPoolSize" value="20"/>
+		<property name="maxPoolSize" value="50"/>
+		<property name="maxIdleTime" value="600"/>
+		</bean>
+		
+		<bean id="emf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="clases" />
+		<property name="jpaVendorAdapter">
+		<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		</property>
+		<property name="jpaProperties">
+		<props>
+		<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
+		<prop key="hibernate.hbm2ddl.auto">update</prop>
+		<prop key="hibernate.format_sql">true</prop>
+		<prop key="hibernate.show_sql">true</prop>
+		</props>
+		</property>
+		</bean>
+		
+		<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+			<property name="entityManagerFactory" ref= "emf" />
+		</bean>
+		<tx:annotation-driven transaction-manager="transactionManager"/>
+		
+</beans>
