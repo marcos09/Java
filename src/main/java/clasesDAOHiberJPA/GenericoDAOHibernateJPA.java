@@ -13,7 +13,7 @@ import Interface.GenericDAO;
 @Transactional
 public class GenericoDAOHibernateJPA<T> implements GenericDAO<T>{	
 	
-	private EntityManager em;
+	protected EntityManager em;
 	
 	
 	
