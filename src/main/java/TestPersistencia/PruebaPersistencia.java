@@ -48,10 +48,10 @@ public class PruebaPersistencia extends HttpServlet {
 		user.setEmail("juan@prueba.com");
 		
 		publicacion.setAutorPublicacion(user);
-		publicacion.setNombrePublicacion("Bienvenidos a la cartelera virtual");
+		publicacion.setTitulo("Bienvenidos a la cartelera virtual");
 		
 		
-		p.setNombrePublicacion("Esta es una publicacion");
+		p.setTitulo("Esta es una publicacion");
 		
 		cartelera.setNombreCartelera("Cartelera");
 		cartelera.agregarPublicacion(p);

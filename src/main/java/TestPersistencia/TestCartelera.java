@@ -55,8 +55,8 @@ public class TestCartelera extends HttpServlet {
 		docente.setEmail("Docente que publica en cartelera");
 		publicacion.setAutorPublicacion(docente);
 		p.setAutorPublicacion(user);
-		publicacion.setNombrePublicacion("Esta es una publicacion en la cartelera nueva con un suscriptor y un docente publicador ");
-		p.setNombrePublicacion("Otra publicación de la cartelera con suscriptores");
+		publicacion.setTitulo("Esta es una publicacion en la cartelera nueva con un suscriptor y un docente publicador ");
+		p.setTitulo("Otra publicación de la cartelera con suscriptores");
 		p.agregarComentario(coment);
 		cartelera.setNombreCartelera("Cartelera con Suscriptores");
 		cartelera.agregarPublicacion(p);
